@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="SimpliCity"
+run/main_scene="res://MainMenu.tscn"
 config/icon="res://icon.png"
 
 [editor]
