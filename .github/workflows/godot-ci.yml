@@ -2,7 +2,7 @@ name: "godot-ci"
 on: push
 
 env:
-  GODOT_VERSION: 3.5.1
+  GODOT_VERSION: 3.4.2
   EXPORT_NAME: SimpliCity
 
 jobs:
