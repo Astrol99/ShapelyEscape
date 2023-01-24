@@ -8,7 +8,7 @@ extents = Vector2( 447.75, 12.5 )
 [node name="Level1" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 99, 123 )
+position = Vector2( 505, 431 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -24,7 +24,7 @@ position = Vector2( 539.25, 569 )
 shape = SubResource( 1 )
 
 [node name="Cat_Goof" parent="." instance=ExtResource( 1 )]
-position = Vector2( 623, 615 )
+position = Vector2( 1019, 782 )
 scale = Vector2( 0.25, 0.25 )
 __meta__ = {
 "_edit_group_": true
