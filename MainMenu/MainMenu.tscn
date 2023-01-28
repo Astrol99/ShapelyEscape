@@ -1,0 +1,193 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://MainMenu/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Dog_Oof/dogballsanimated.png" type="Texture" id=2]
+[ext_resource path="res://goofy.tres" type="Theme" id=3]
+[ext_resource path="res://Cat_Goof/cat_goof.png" type="Texture" id=4]
+[ext_resource path="res://Paw Key.png" type="Texture" id=5]
+[ext_resource path="res://COMIC.TTF" type="DynamicFontData" id=6]
+[ext_resource path="res://space.png" type="Texture" id=7]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 5 )
+region = Rect2( 918, 0, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 5 )
+region = Rect2( 1836, 0, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 5 )
+region = Rect2( 2754, 0, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 2754, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 5 )
+region = Rect2( 918, 2754, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 5 )
+region = Rect2( 1836, 2754, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 5 )
+region = Rect2( 2754, 2754, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 1836, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 5 )
+region = Rect2( 918, 1836, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 5 )
+region = Rect2( 1836, 1836, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 5 )
+region = Rect2( 2754, 1836, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 918, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 5 )
+region = Rect2( 918, 918, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 5 )
+region = Rect2( 1836, 918, 918, 918 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 5 )
+region = Rect2( 2754, 918, 918, 918 )
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "brown",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "diamond",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "gold",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "silver",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=18]
+size = 140
+font_data = ExtResource( 6 )
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -20.0
+
+[node name="Space_Background" type="Sprite" parent="."]
+position = Vector2( 988, 541 )
+scale = Vector2( 1.37561, 1.37561 )
+texture = ExtResource( 7 )
+
+[node name="Dog_Oof" type="Sprite" parent="."]
+position = Vector2( 350, 602 )
+rotation = -0.479966
+scale = Vector2( 2.55861, 2.55861 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 78, 39, 273, 273 )
+
+[node name="Cat_Goof" type="Sprite" parent="."]
+position = Vector2( 1588, 617 )
+rotation = 0.335103
+scale = Vector2( -2.02692, 2.07476 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 90, 60, 330, 300 )
+
+[node name="Brown_Key" type="AnimatedSprite" parent="."]
+position = Vector2( 820, 953 )
+scale = Vector2( 0.12963, 0.12963 )
+frames = SubResource( 17 )
+animation = "brown"
+playing = true
+
+[node name="Silver_Key" type="AnimatedSprite" parent="."]
+position = Vector2( 1146, 956 )
+scale = Vector2( 0.12963, 0.12963 )
+frames = SubResource( 17 )
+animation = "diamond"
+frame = 3
+playing = true
+
+[node name="Gold_Key" type="AnimatedSprite" parent="."]
+position = Vector2( 1038, 956 )
+scale = Vector2( 0.12963, 0.12963 )
+frames = SubResource( 17 )
+animation = "gold"
+frame = 2
+playing = true
+
+[node name="Diamond_Key" type="AnimatedSprite" parent="."]
+position = Vector2( 930, 956 )
+scale = Vector2( 0.12963, 0.12963 )
+frames = SubResource( 17 )
+animation = "silver"
+playing = true
+
+[node name="Label" type="Label" parent="."]
+margin_top = 51.0
+margin_right = 1920.0
+margin_bottom = 247.0
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 18 )
+text = "Shapely Escape"
+align = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -18.0
+margin_bottom = 18.0
+theme = ExtResource( 3 )
+alignment = 1
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+margin_right = 1920.0
+margin_bottom = 113.0
+focus_neighbour_top = NodePath("../Quit")
+text = "Start"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+margin_top = 117.0
+margin_right = 1920.0
+margin_bottom = 230.0
+focus_neighbour_bottom = NodePath("../Start")
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Enter_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
