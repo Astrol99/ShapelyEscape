@@ -1,29 +1,33 @@
 extends KinematicBody2D
 
+const HALT_SPEED = 0.1
+const MAX_SPEED = 400.0
+
+const GRAVITY = 1500.0
+const JUMP_FORCE = 1000.0
+
+var direction = Vector2.ZERO
 var velocity = Vector2.ZERO
-const FLOOR_NORMAL = Vector2.UP
+var jump_force = Vector2.ZERO
 
-export var speed = Vector2(400.0, 500.0)
-export var gravity = 3500.0
-
-func get_direction() -> Vector2:
-	return Vector2(
-		Input.get_action_strength("move_right1") - Input.get_action_strength("move_left1"),
-		-Input.get_action_strength("jump1") if is_on_floor() and Input.is_action_just_pressed("jump1") else 0.0)
-
-func calculate_move_velocity(linear_velocity: Vector2, direction: Vector2, speed: Vector2, is_jump_interrupted: bool) -> Vector2:
-	var velocity = linear_velocity
-	velocity.x = speed.x * direction.x
-	if direction.y != 0.0:
-		velocity.y = speed.y * direction.y
-	if is_jump_interrupted:
-		velocity.y = 0.0
-	return velocity
-
-func _physics_process(delta: float) -> void:
-	var is_jump_interrupted = Input.is_action_just_released("jump1") and velocity.y < 0.0
-	var direction = get_direction()
-	velocity = calculate_move_velocity(velocity, direction, speed, is_jump_interrupted)
-	var snap = Vector2.DOWN * 60.0 if direction.y == 0.0 else Vector2.ZERO
-	velocity.y += gravity * delta
-	velocity = move_and_slide_with_snap(velocity, snap, FLOOR_NORMAL, true)
+func _process(delta):
+	direction = Vector2.ZERO
+	
+	if Input.is_action_pressed("move_left1"):
+		direction.x = -1
+		$Sprite.flip_h = true
+	
+	if Input.is_action_pressed("move_right1"):
+		direction.x = 1
+		$Sprite.flip_h = false
+	
+	if direction == Vector2.ZERO:
+		velocity = velocity.linear_interpolate(Vector2.ZERO, delta/HALT_SPEED)
+	else:
+		velocity = velocity.linear_interpolate(direction * MAX_SPEED, delta/HALT_SPEED)
+	
+	if Input.is_action_just_pressed("jump1") and is_on_floor():
+		velocity.y = -JUMP_FORCE
+	
+	velocity.y += GRAVITY * delta
+	move_and_slide(velocity, Vector2.UP)

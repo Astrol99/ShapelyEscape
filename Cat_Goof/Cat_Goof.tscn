@@ -1,90 +1,22 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Cat_Goof/Cat_Goof.gd" type="Script" id=1]
 [ext_resource path="res://Cat_Goof/cat_goof.png" type="Texture" id=2]
 
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 480, 480 )
-
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 2 )
-region = Rect2( 480, 0, 480, 480 )
-
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 2 )
-region = Rect2( 960, 960, 480, 480 )
-
-[sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 2 )
-region = Rect2( 1440, 960, 480, 480 )
-
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 1440, 480, 480 )
-
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 2 )
-region = Rect2( 480, 1440, 480, 480 )
-
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 2 )
-region = Rect2( 960, 0, 480, 480 )
-
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 2 )
-region = Rect2( 1440, 0, 480, 480 )
-
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 480, 480, 480 )
-
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 2 )
-region = Rect2( 480, 480, 480, 480 )
-
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 2 )
-region = Rect2( 960, 480, 480, 480 )
-
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 2 )
-region = Rect2( 1440, 480, 480, 480 )
-
-[sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 960, 480, 480 )
-
-[sub_resource type="SpriteFrames" id=11]
-animations = [ {
-"frames": [ SubResource( 13 ), SubResource( 14 ) ],
-"loop": true,
-"name": "idle",
-"speed": 0.5
-}, {
-"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
-"loop": true,
-"name": "run",
-"speed": 5.0
-} ]
+region = Rect2( 90, 60, 330, 300 )
 
 [sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 142.5, 142.5 )
+extents = Vector2( 135, 142.5 )
 
 [node name="Cat_Goof" type="KinematicBody2D"]
+collision_mask = 8
 script = ExtResource( 1 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 11 )
-animation = "run"
-frame = 3
-playing = true
+[node name="Sprite" type="Sprite" parent="."]
+texture = SubResource( 13 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 22.5, -22.5 )
+position = Vector2( 0, 7.5 )
 shape = SubResource( 12 )

@@ -99,6 +99,13 @@ jump2={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="puzzles"
+2d_physics/layer_3="keys"
+2d_physics/layer_4="world"
+
 [physics]
 
 common/enable_pause_aware_picking=true
