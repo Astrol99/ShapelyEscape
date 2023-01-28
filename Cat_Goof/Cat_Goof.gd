@@ -1,11 +1,7 @@
 extends KinematicBody2D
 
-const HALT_SPEED = 0.1
-const MAX_SPEED = 200.0
-const GRAVITY = 2000.0
-const JUMP_FORCE = 500.0
-
-export (Vector2) var speed = Vector2(300, 500)
+export (Vector2) var speed = Vector2(300, 600)
+const GRAVITY = 1200.0
 var velocity = Vector2.ZERO
 
 onready var sprite = $Sprite
@@ -27,15 +23,20 @@ func calculate_move_velocity(linear_velocity, direction, speed, is_jump_interrup
 		_velocity.y *= 0.6
 	return _velocity
 
+var landing = false
 func get_new_animation(direction):
 	var animation_new = ""
 	if is_on_floor():
-		if abs(velocity.x) > 0.1:
+		if landing:
+			animation_new = "landing"
+			landing = false
+		elif abs(velocity.x) > 0.1:
 			animation_new = "run"
 		else:
 			animation_new = "idle"
 	else:
 		if velocity.y > 0:
+			landing = true
 			animation_new = "falling"
 		else:
 			animation_new = "jumping"
@@ -55,19 +56,17 @@ func _physics_process(delta):
 	velocity = calculate_move_velocity(velocity, direction, speed, is_jump_interrupted)
 	
 	if Input.is_action_pressed("jump1") and is_on_floor():
-		velocity.y = -JUMP_FORCE
+		velocity.y = -speed.y
 	
-	
-	#if direction == Vector2.ZERO:
-	#	velocity = velocity.linear_interpolate(Vector2.ZERO, delta/HALT_SPEED)
-	#else:
-	#	velocity = velocity.linear_interpolate(direction * MAX_SPEED, delta/HALT_SPEED)
+	if is_on_ceiling():
+		velocity.y = 0
 	
 	var animation = get_new_animation(direction)
 	if animation != animation_player.current_animation:
 		animation_player.play(animation)
-		print(animation)
+		print(self.name + ": " + animation)
 	
 	velocity.y += GRAVITY * delta
+	velocity.y = min(velocity.y, GRAVITY)
 	move_and_slide(velocity, Vector2.UP)
 

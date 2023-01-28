@@ -8,7 +8,7 @@ extents = Vector2( 447.75, 12.5 )
 [node name="Level1" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 505, 431 )
+position = Vector2( 490, 430 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -23,8 +23,24 @@ margin_bottom = 582.0
 position = Vector2( 539.25, 569 )
 shape = SubResource( 1 )
 
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 949, 337 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
+margin_left = 92.0
+margin_top = 557.0
+margin_right = 987.0
+margin_bottom = 582.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 539.25, 569 )
+shape = SubResource( 1 )
+
 [node name="Cat_Goof" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1019, 782 )
+position = Vector2( 977, 950 )
 scale = Vector2( 0.25, 0.25 )
 __meta__ = {
 "_edit_group_": true

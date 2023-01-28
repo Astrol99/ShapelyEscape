@@ -3,8 +3,8 @@
 [ext_resource path="res://Cat_Goof/Cat_Goof.gd" type="Script" id=1]
 [ext_resource path="res://Cat_Goof/cat_goof.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 135, 142.5 )
+[sub_resource type="CapsuleShape2D" id=18]
+radius = 132.0
 
 [sub_resource type="Animation" id=16]
 resource_name = "falling"
@@ -98,11 +98,11 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 hframes = 4
 vframes = 4
-frame = 9
+frame = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 15, -22.5 )
-shape = SubResource( 12 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite")
