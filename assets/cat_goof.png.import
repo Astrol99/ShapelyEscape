@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dogballsanimated.png-8dccebec0d45e7b9cf01c3ea021cfe53.stex"
+path="res://.import/cat_goof.png-30a729f0bde0e7fcb4ee99082f7a0385.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dog_Oof/dogballsanimated.png"
-dest_files=[ "res://.import/dogballsanimated.png-8dccebec0d45e7b9cf01c3ea021cfe53.stex" ]
+source_file="res://assets/cat_goof.png"
+dest_files=[ "res://.import/cat_goof.png-30a729f0bde0e7fcb4ee99082f7a0385.stex" ]
 
 [params]
 

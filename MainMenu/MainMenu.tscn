@@ -1,12 +1,12 @@
 [gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://MainMenu/MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://Dog_Oof/dogballsanimated.png" type="Texture" id=2]
+[ext_resource path="res://assets/dogballsanimated.png" type="Texture" id=2]
 [ext_resource path="res://goofy.tres" type="Theme" id=3]
-[ext_resource path="res://Cat_Goof/cat_goof.png" type="Texture" id=4]
-[ext_resource path="res://Paw Key.png" type="Texture" id=5]
-[ext_resource path="res://COMIC.TTF" type="DynamicFontData" id=6]
-[ext_resource path="res://space.png" type="Texture" id=7]
+[ext_resource path="res://assets/cat_goof.png" type="Texture" id=4]
+[ext_resource path="res://assets/Paw Key.png" type="Texture" id=5]
+[ext_resource path="res://assets/COMIC.TTF" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/space.png" type="Texture" id=7]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 5 )
@@ -133,6 +133,7 @@ position = Vector2( 820, 953 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "brown"
+frame = 1
 playing = true
 
 [node name="Silver_Key" type="AnimatedSprite" parent="."]
@@ -140,7 +141,6 @@ position = Vector2( 1146, 956 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "diamond"
-frame = 3
 playing = true
 
 [node name="Gold_Key" type="AnimatedSprite" parent="."]
@@ -156,6 +156,7 @@ position = Vector2( 930, 956 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "silver"
+frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="."]
