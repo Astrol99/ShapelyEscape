@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+# this is so fun especially with iqballs
+
 export (Vector2) var speed = Vector2(300, 600)
 const GRAVITY = 1200.0
 var velocity = Vector2.ZERO
@@ -69,5 +71,3 @@ func _physics_process(delta):
 	velocity.y += GRAVITY * delta
 	velocity.y = min(velocity.y, GRAVITY)
 	move_and_slide(velocity, Vector2.UP)
-
-#asdasdasdasdasdasd
