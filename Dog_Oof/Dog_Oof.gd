@@ -1,8 +1,5 @@
-extends KinematicBody2D
-
-export (Vector2) var speed = Vector2(300, 600)
-const GRAVITY = 1200.0
-var velocity = Vector2.ZERO
+class_name Dog_Oof
+extends Actor
 
 onready var sprite = $Sprite
 onready var animation_player = $AnimationPlayer
@@ -66,7 +63,5 @@ func _physics_process(delta):
 		animation_player.play(animation)
 		print(self.name + ": " + animation)
 	
-	velocity.y += GRAVITY * delta
-	velocity.y = min(velocity.y, GRAVITY)
 	move_and_slide(velocity, Vector2.UP)
 

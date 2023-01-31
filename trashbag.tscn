@@ -1,0 +1,270 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/trashbags/trashbags.png" type="Texture" id=1]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2( 15, -257 )
+
+[node name="YSort" type="YSort" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Trashbags" type="Sprite" parent="YSort"]
+position = Vector2( 210, 1117 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 108, 126, 342, 342 )
+
+[node name="Trashbags2" type="Sprite" parent="YSort"]
+position = Vector2( 209, 1038 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 108, 126, 342, 342 )
+
+[node name="Trashbags3" type="Sprite" parent="YSort"]
+position = Vector2( 292, 1036 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 108, 126, 342, 342 )
+
+[node name="Trashbags4" type="Sprite" parent="YSort"]
+position = Vector2( 291, 1111 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 108, 126, 342, 342 )
+
+[node name="Trashbags5" type="Sprite" parent="YSort"]
+position = Vector2( 378, 1114 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 108, 126, 342, 342 )
+
+[node name="Trashbags6" type="Sprite" parent="YSort"]
+position = Vector2( 138, 1104 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 108, 126, 342, 342 )
+
+[node name="Trashbags7" type="Sprite" parent="YSort"]
+position = Vector2( 158, 1120 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags8" type="Sprite" parent="YSort"]
+position = Vector2( 81, 1022 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags16" type="Sprite" parent="YSort"]
+position = Vector2( 131, 1002 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags17" type="Sprite" parent="YSort"]
+position = Vector2( 63, 931 )
+rotation = -1.50153
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags18" type="Sprite" parent="YSort"]
+position = Vector2( 188, 994 )
+rotation = -1.50153
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags19" type="Sprite" parent="YSort"]
+position = Vector2( 305, 1126 )
+rotation = -1.50153
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags20" type="Sprite" parent="YSort"]
+position = Vector2( 246, 1132 )
+rotation = -1.50153
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags21" type="Sprite" parent="YSort"]
+position = Vector2( 141, 1072 )
+rotation = -1.50153
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags22" type="Sprite" parent="YSort"]
+position = Vector2( 56, 1063 )
+rotation = -1.29285
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags23" type="Sprite" parent="YSort"]
+position = Vector2( 30.0001, 984 )
+rotation = -1.29285
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags24" type="Sprite" parent="YSort"]
+position = Vector2( 446, 1034 )
+rotation = -1.29285
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags9" type="Sprite" parent="YSort"]
+position = Vector2( 362, 1052 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags10" type="Sprite" parent="YSort"]
+position = Vector2( 76, 1119 )
+rotation = 0.119964
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags11" type="Sprite" parent="YSort"]
+position = Vector2( 370, 1106 )
+rotation = 0.119964
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 18, 720, 504, 360 )
+
+[node name="Trashbags12" type="Sprite" parent="YSort"]
+position = Vector2( 582, 1131 )
+rotation = 0.119964
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 18, 720, 504, 360 )
+
+[node name="Trashbags13" type="Sprite" parent="YSort"]
+position = Vector2( 447, 1138 )
+rotation = 0.119964
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 18, 720, 504, 360 )
+
+[node name="Trashbags14" type="Sprite" parent="YSort"]
+position = Vector2( 524, 1074 )
+rotation = 0.119964
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 18, 720, 504, 360 )
+
+[node name="Trashbags15" type="Sprite" parent="YSort"]
+position = Vector2( 524, 1074 )
+rotation = -0.115815
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 18, 720, 504, 360 )
+
+[node name="Trashbags25" type="Sprite" parent="YSort"]
+position = Vector2( 685, 1129 )
+rotation = -0.115815
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 18, 720, 504, 360 )
+
+[node name="Trashbags26" type="Sprite" parent="YSort"]
+position = Vector2( 797, 1138 )
+rotation = -0.115815
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 18, 720, 504, 360 )
+
+[node name="Trashbags27" type="Sprite" parent="YSort"]
+position = Vector2( 279, 981 )
+rotation = -0.115815
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 18, 720, 504, 360 )
+
+[node name="Trashbags28" type="Sprite" parent="YSort"]
+position = Vector2( 249, 1074 )
+rotation = -0.115815
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 18, 720, 504, 360 )
+
+[node name="Trashbags29" type="Sprite" parent="YSort"]
+position = Vector2( 149, 920 )
+rotation = -0.115815
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 18, 720, 504, 360 )
+
+[node name="Trashbags30" type="Sprite" parent="YSort"]
+position = Vector2( 432, 1070 )
+rotation = -0.115815
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags31" type="Sprite" parent="YSort"]
+position = Vector2( 624, 1101 )
+rotation = -0.115815
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 630, 54, 432, 468 )
+
+[node name="Trashbags32" type="Sprite" parent="YSort"]
+position = Vector2( 506, 1124 )
+rotation = -0.115815
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 108, 126, 342, 342 )
+
+[node name="Trashbags33" type="Sprite" parent="YSort"]
+position = Vector2( 719, 1138 )
+rotation = -0.115815
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 108, 126, 342, 342 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -1, 934 )
+scale = Vector2( 2.23987, 1 )
+polygon = PoolVector2Array( 15.1795, -40, 378.594, 233, 12.5007, 235 )

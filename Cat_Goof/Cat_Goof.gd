@@ -1,10 +1,5 @@
-extends KinematicBody2D
-
-# this is so fun especially with iqballs
-
-export (Vector2) var speed = Vector2(300, 600)
-const GRAVITY = 1200.0
-var velocity = Vector2.ZERO
+class_name Cat_Goof
+extends Actor
 
 onready var sprite = $Sprite
 onready var animation_player = $AnimationPlayer
@@ -60,14 +55,9 @@ func _physics_process(delta):
 	if Input.is_action_pressed("jump1") and is_on_floor():
 		velocity.y = -speed.y
 	
-	if is_on_ceiling():
-		velocity.y = 0
-	
 	var animation = get_new_animation(direction)
 	if animation != animation_player.current_animation:
 		animation_player.play(animation)
 		print(self.name + ": " + animation)
 	
-	velocity.y += GRAVITY * delta
-	velocity.y = min(velocity.y, GRAVITY)
 	move_and_slide(velocity, Vector2.UP)
