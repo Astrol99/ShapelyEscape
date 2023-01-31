@@ -3,6 +3,8 @@ extends KinematicBody2D
 export (Vector2) var speed = Vector2(300, 600)
 const GRAVITY = 1200.0
 var velocity = Vector2.ZERO
+var possessing = false
+
 
 onready var sprite = $Sprite
 onready var animation_player = $AnimationPlayer
@@ -45,28 +47,39 @@ func get_new_animation(direction):
 
 func _physics_process(delta):
 	var direction = get_direction()
+	if(not possessing):
+		if direction.x != 0:
+			if direction.x > 0:
+				sprite.scale.x = 1
+			else:
+				sprite.scale.x = -1
+		
+		var is_jump_interrupted = Input.is_action_just_released("jump2") and velocity.y < 0.0
+		velocity = calculate_move_velocity(velocity, direction, speed, is_jump_interrupted)
+		
+		if Input.is_action_pressed("jump2") and is_on_floor():
+			velocity.y = -speed.y
+		
+		if is_on_ceiling():
+			velocity.y = 0
+		
+		var animation = get_new_animation(direction)
+		if animation != animation_player.current_animation:
+			animation_player.play(animation)
+			print(self.name + ": " + animation)
 	
-	if direction.x != 0:
-		if direction.x > 0:
-			sprite.scale.x = 1
-		else:
-			sprite.scale.x = -1
-	
-	var is_jump_interrupted = Input.is_action_just_released("jump2") and velocity.y < 0.0
-	velocity = calculate_move_velocity(velocity, direction, speed, is_jump_interrupted)
-	
-	if Input.is_action_pressed("jump2") and is_on_floor():
-		velocity.y = -speed.y
-	
-	if is_on_ceiling():
-		velocity.y = 0
-	
-	var animation = get_new_animation(direction)
-	if animation != animation_player.current_animation:
-		animation_player.play(animation)
-		print(self.name + ": " + animation)
-	
-	velocity.y += GRAVITY * delta
-	velocity.y = min(velocity.y, GRAVITY)
-	move_and_slide(velocity, Vector2.UP)
+		velocity.y += GRAVITY * delta
+		velocity.y = min(velocity.y, GRAVITY)
+		move_and_slide(velocity, Vector2.UP)
 
+func on_Player_posess():
+	possessing = true
+	self.collision_layer = 0
+	self.collision_mask = 0
+	hide()
+func on_Player_unpossess():
+	possessing = false
+	self.collision_layer = 1
+	self. collision_mask = 1
+	show()
+	

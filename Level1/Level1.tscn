@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Cat_Goof/Cat_Goof.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Dog_Oof/Dog_Oof.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/TileSEt (3).png" type="Texture" id=3]
+[ext_resource path="res://Possessable.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 611, 0, 611, 605, 0, 605 )
@@ -160,6 +161,9 @@ points = PoolVector2Array( 0, 0, 611, 0, 611, 605, 0, 605 )
 } ]
 1/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 1189, 10 )
+
 [node name="Level1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -169,15 +173,32 @@ cell_size = Vector2( 611, 611 )
 format = 1
 
 [node name="Cat_Goof" parent="." instance=ExtResource( 1 )]
-position = Vector2( 360, 969 )
+position = Vector2( 559, 541 )
 scale = Vector2( 0.25, 0.25 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Dog_Oof" parent="." instance=ExtResource( 2 )]
-position = Vector2( 262, 237 )
+position = Vector2( 320, 542 )
 scale = Vector2( 0.3, 0.3 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 724, 676 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 217, 0 )
+shape = SubResource( 14 )
+
+[node name="Node2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1000, 549 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1220, 544 )
+
+[node name="Node2D3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 927, 551 )
+scale = Vector2( 0.25, 0.25 )
