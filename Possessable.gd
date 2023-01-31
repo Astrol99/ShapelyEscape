@@ -75,6 +75,10 @@ func _process(delta):
 			velocity.y += GRAVITY * delta
 			velocity.y = min(velocity.y, GRAVITY)
 			move_and_slide(velocity, Vector2.UP)
+		if(not is_on_floor() and possessedcat == false and possesseddog == false):
+			velocity.y += GRAVITY * delta
+			velocity.y = min(velocity.y, GRAVITY)
+			move_and_slide(velocity, Vector2.UP)
 	
 	
 
