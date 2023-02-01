@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Cat_Goof/Cat_Goof.gd" type="Script" id=1]
 [ext_resource path="res://assets/cat_goof/Cat goof looks (6).png" type="Texture" id=2]
@@ -111,3 +111,5 @@ anims/idle = SubResource( 13 )
 anims/jumping = SubResource( 14 )
 anims/landing = SubResource( 17 )
 anims/run = SubResource( 15 )
+
+[node name="Area2D" parent="." instance=ExtResource( 3 )]
