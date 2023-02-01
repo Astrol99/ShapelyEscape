@@ -3,7 +3,7 @@ on: push
 
 env:
   GODOT_VERSION: 3.4.2
-  EXPORT_NAME: SimpliCity
+  EXPORT_NAME: ShapelyEscape
 
 jobs:
   export-web:
@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: barichello/godot-ci:3.4.2
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout
         uses: actions/checkout@v2

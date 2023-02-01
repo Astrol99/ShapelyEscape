@@ -1,13 +1,10 @@
-extends KinematicBody2D
-
-# this is so fun especially with iqballs
-var possessing = false
-export (Vector2) var speed = Vector2(300, 600)
-const GRAVITY = 1200.0
-var velocity = Vector2.ZERO
+class_name Cat_Goof
+extends Actor
 
 onready var sprite = $Sprite
 onready var animation_player = $AnimationPlayer
+
+var possessing = false
 
 func get_direction():
 	return Vector2(
@@ -45,6 +42,21 @@ func get_new_animation(direction):
 	
 	return animation_new
 
+func _ready():
+	get_parent().get_node("MultiTargetCam").add_target(self)
+
+func on_Player2_posess():
+	possessing = true
+	hide()
+	self.collision_layer = 0
+	self.collision_mask = 0
+
+func on_Player2_unpossess():
+	possessing = false
+	show()
+	self.collision_mask = 1
+	self.collision_layer = 1
+
 func _physics_process(delta):
 	var direction = get_direction()
 	if(not possessing):
@@ -69,17 +81,5 @@ func _physics_process(delta):
 			animation_player.play(animation)
 			print(self.name + ": " + animation)
 		
-		velocity.y += GRAVITY * delta
-		velocity.y = min(velocity.y, GRAVITY)
 		move_and_slide(velocity, Vector2.UP)
-		
-func on_Player2_posess():
-	possessing = true
-	hide()
-	self.collision_layer = 0
-	self.collision_mask = 0
-func on_Player2_unpossess():
-	possessing = false
-	show()
-	self.collision_mask = 1
-	self.collision_layer = 1
+    

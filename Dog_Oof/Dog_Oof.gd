@@ -1,13 +1,9 @@
-extends KinematicBody2D
-
-export (Vector2) var speed = Vector2(300, 600)
-const GRAVITY = 1200.0
-var velocity = Vector2.ZERO
-var possessing = false
-
+class_name Dog_Oof
+extends Actor
 
 onready var sprite = $Sprite
 onready var animation_player = $AnimationPlayer
+var possessing = false
 
 func get_direction():
 	return Vector2(
@@ -45,6 +41,21 @@ func get_new_animation(direction):
 	
 	return animation_new
 
+func _ready():
+	get_parent().get_node("MultiTargetCam").add_target(self)
+
+func on_Player_posess():
+	possessing = true
+	self.collision_layer = 0
+	self.collision_mask = 0
+	hide()
+	
+func on_Player_unpossess():
+	possessing = false
+	self.collision_layer = 1
+	self. collision_mask = 1
+	show()
+
 func _physics_process(delta):
 	var direction = get_direction()
 	if(not possessing):
@@ -67,19 +78,5 @@ func _physics_process(delta):
 		if animation != animation_player.current_animation:
 			animation_player.play(animation)
 			print(self.name + ": " + animation)
-	
-		velocity.y += GRAVITY * delta
-		velocity.y = min(velocity.y, GRAVITY)
+		
 		move_and_slide(velocity, Vector2.UP)
-
-func on_Player_posess():
-	possessing = true
-	self.collision_layer = 0
-	self.collision_mask = 0
-	hide()
-func on_Player_unpossess():
-	possessing = false
-	self.collision_layer = 1
-	self. collision_mask = 1
-	show()
-	
