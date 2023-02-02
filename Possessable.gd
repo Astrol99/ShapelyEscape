@@ -54,9 +54,9 @@ func _process(delta):
 	
 	if direction.x != 0:
 		if direction.x > 0:
-			sprite.scale.x = 1
+			sprite.scale.x = abs(sprite.scale.x)
 		else:
-			sprite.scale.x = -1
+			sprite.scale.x = -abs(sprite.scale.x)
 			
 	if is_on_ceiling():
 		velocity.y = 0

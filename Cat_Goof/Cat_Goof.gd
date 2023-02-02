@@ -63,9 +63,9 @@ func _physics_process(delta):
 		
 		if direction.x != 0:
 			if direction.x > 0:
-				sprite.scale.x = 1
+				sprite.scale.x = abs(sprite.scale.x)
 			else:
-				sprite.scale.x = -1
+				sprite.scale.x = -abs(sprite.scale.x)
 		
 		var is_jump_interrupted = Input.is_action_just_released("jump1") and velocity.y < 0.0
 		velocity = calculate_move_velocity(velocity, direction, speed, is_jump_interrupted)
