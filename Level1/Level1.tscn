@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/God_Forsaken_TileSet/The PIPE (3).png" type="Texture" id=5]
 [ext_resource path="res://assets/Lights/Lights.png" type="Texture" id=6]
 [ext_resource path="res://MultiTargetCam.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Possessable.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/PossessableObjects/Possessable.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World_Objects/LightBeam.tscn" type="PackedScene" id=9]
 [ext_resource path="res://World_Objects/TrashBagsBIG.tscn" type="PackedScene" id=10]
 
