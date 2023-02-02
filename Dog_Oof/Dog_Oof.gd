@@ -71,9 +71,6 @@ func _physics_process(delta):
 		if Input.is_action_pressed("jump2") and is_on_floor():
 			velocity.y = -speed.y
 		
-		if is_on_ceiling():
-			velocity.y = 0
-		
 		var animation = get_new_animation(direction)
 		if animation != animation_player.current_animation:
 			animation_player.play(animation)
