@@ -82,4 +82,4 @@ func _physics_process(delta):
 			print(self.name + ": " + animation)
 		
 		move_and_slide(velocity, Vector2.UP)
-    
+	

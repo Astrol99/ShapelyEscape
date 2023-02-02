@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://addons/godot-git-plugin/git_api.gdns"
+}, {
+"base": "Actor",
+"class": "Possessable",
+"language": "GDScript",
+"path": "res://Possessable.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
 "Cat_Goof": "",
 "Dog_Oof": "",
-"GitAPI": ""
+"GitAPI": "",
+"Possessable": ""
 }
 
 [application]
