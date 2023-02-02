@@ -4,6 +4,9 @@ signal stop
 signal PotentialSelect
 var inList : Array = get_overlapping_areas()
 signal PotentialSelectCat
+onready var parent = get_parent()
+onready var possessablebydog = parent.dog_possessable
+onready var possessablrbycat = parent.cat_possessable
 
 func on_Player_posess():
 	inList = get_overlapping_areas()
