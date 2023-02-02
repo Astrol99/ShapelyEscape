@@ -23,7 +23,7 @@ func _process(delta):
 		if possessing == false:
 			
 			if list.size()>0:
-				if list[0].posessed == false:
+				if list[0].posessed == false and list[0].possessablebydog:
 					object = list[0]
 					object2 = get_parent()
 					hide()
