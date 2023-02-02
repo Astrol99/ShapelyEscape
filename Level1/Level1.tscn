@@ -283,13 +283,14 @@ points = PoolVector2Array( 0, -736, 0, -736, 0, -736 )
 [node name="Level1" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( -21494, -19843 )
+position = Vector2( -21129, -8669 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 4 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 441600, 235520 )
+region_rect = Rect2( 0, 0, 1e+07, 100000 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_lock_": true
 }
 
@@ -482,7 +483,7 @@ position = Vector2( 2352, 697 )
 scale = Vector2( 2, 2 )
 
 [node name="Possessable5" parent="." instance=ExtResource( 11 )]
-position = Vector2( 5112, 3978 )
+position = Vector2( 4822, 4296 )
 scale = Vector2( 2, 2 )
 
 [node name="Possessable2" parent="." instance=ExtResource( 13 )]
@@ -490,263 +491,90 @@ position = Vector2( 1836, 783 )
 scale = Vector2( 5, 5 )
 
 [node name="Possessable4" parent="." instance=ExtResource( 13 )]
-position = Vector2( 5469, 4052 )
+position = Vector2( 8186, 4406 )
 rotation = 1.309
 scale = Vector2( 5, 5 )
 
 [node name="Possessable3" parent="." instance=ExtResource( 12 )]
-position = Vector2( 2753, 681 )
+position = Vector2( 2073, 706 )
 scale = Vector2( 8, 8 )
 
 [node name="Possessable7" parent="." instance=ExtResource( 12 )]
-position = Vector2( 5408, 3781 )
+position = Vector2( 5392, 4236 )
 scale = Vector2( 8, 8 )
 
 [node name="Possessable8" parent="." instance=ExtResource( 11 )]
-position = Vector2( 6005, 3693 )
+position = Vector2( 7267, 4129 )
 scale = Vector2( 2, 2 )
 
 [node name="Possessable9" parent="." instance=ExtResource( 13 )]
-position = Vector2( 5857, 3910 )
+position = Vector2( 5882, 4190 )
 rotation = 1.309
 scale = Vector2( 5, 5 )
 
 [node name="Possessable10" parent="." instance=ExtResource( 12 )]
-position = Vector2( 5685, 3712 )
+position = Vector2( 6594, 3782 )
 scale = Vector2( 8, 8 )
 
 [node name="Possessable11" parent="." instance=ExtResource( 11 )]
-position = Vector2( 5659, 4048 )
+position = Vector2( 4385, 4084 )
 scale = Vector2( 2, 2 )
 
 [node name="Possessable12" parent="." instance=ExtResource( 13 )]
-position = Vector2( 6035, 4135 )
+position = Vector2( 6080, 4203 )
 rotation = 1.309
 scale = Vector2( 5, 5 )
 
 [node name="Possessable13" parent="." instance=ExtResource( 12 )]
-position = Vector2( 5031, 4140 )
+position = Vector2( 5072, 4259 )
 scale = Vector2( 8, 8 )
 
 [node name="Possessable14" parent="." instance=ExtResource( 11 )]
-position = Vector2( 5659, 4048 )
+position = Vector2( 5209, 4198 )
 scale = Vector2( 2, 2 )
 
 [node name="Possessable15" parent="." instance=ExtResource( 13 )]
-position = Vector2( 6035, 4135 )
+position = Vector2( 6802, 4381 )
 rotation = 1.309
 scale = Vector2( 5, 5 )
 
 [node name="Possessable16" parent="." instance=ExtResource( 12 )]
-position = Vector2( 5031, 4140 )
+position = Vector2( 4578, 4327 )
 scale = Vector2( 8, 8 )
 
 [node name="Possessable17" parent="." instance=ExtResource( 11 )]
-position = Vector2( 6455, 3324 )
+position = Vector2( 7727, 3969 )
 scale = Vector2( 2, 2 )
 
 [node name="Possessable18" parent="." instance=ExtResource( 13 )]
-position = Vector2( 6812, 3398 )
+position = Vector2( 7510, 4182 )
 rotation = 1.309
 scale = Vector2( 5, 5 )
 
 [node name="Possessable19" parent="." instance=ExtResource( 12 )]
-position = Vector2( 6751, 3127 )
+position = Vector2( 6436, 4376 )
 scale = Vector2( 8, 8 )
-
-[node name="Possessable20" parent="." instance=ExtResource( 11 )]
-position = Vector2( 7348, 3039 )
-scale = Vector2( 2, 2 )
-
-[node name="Possessable21" parent="." instance=ExtResource( 13 )]
-position = Vector2( 7200, 3256 )
-rotation = 1.309
-scale = Vector2( 5, 5 )
-
-[node name="Possessable22" parent="." instance=ExtResource( 12 )]
-position = Vector2( 7028, 3058 )
-scale = Vector2( 8, 8 )
-
-[node name="Possessable23" parent="." instance=ExtResource( 11 )]
-position = Vector2( 7002, 3394 )
-scale = Vector2( 2, 2 )
-
-[node name="Possessable24" parent="." instance=ExtResource( 13 )]
-position = Vector2( 7378, 3481 )
-rotation = 1.309
-scale = Vector2( 5, 5 )
-
-[node name="Possessable25" parent="." instance=ExtResource( 12 )]
-position = Vector2( 6374, 3486 )
-scale = Vector2( 8, 8 )
-
-[node name="Possessable26" parent="." instance=ExtResource( 11 )]
-position = Vector2( 7002, 3394 )
-scale = Vector2( 2, 2 )
-
-[node name="Possessable27" parent="." instance=ExtResource( 13 )]
-position = Vector2( 7378, 3481 )
-rotation = 1.309
-scale = Vector2( 5, 5 )
-
-[node name="Possessable28" parent="." instance=ExtResource( 12 )]
-position = Vector2( 6374, 3486 )
-scale = Vector2( 8, 8 )
-
-[node name="Possessable29" parent="." instance=ExtResource( 11 )]
-position = Vector2( 6455, 3324 )
-scale = Vector2( 2, 2 )
-
-[node name="Possessable30" parent="." instance=ExtResource( 13 )]
-position = Vector2( 6812, 3398 )
-rotation = 1.309
-scale = Vector2( 5, 5 )
-
-[node name="Possessable31" parent="." instance=ExtResource( 12 )]
-position = Vector2( 6751, 3127 )
-scale = Vector2( 8, 8 )
-
-[node name="Possessable32" parent="." instance=ExtResource( 11 )]
-position = Vector2( 7348, 3039 )
-scale = Vector2( 2, 2 )
-
-[node name="Possessable33" parent="." instance=ExtResource( 13 )]
-position = Vector2( 7200, 3256 )
-rotation = 1.309
-scale = Vector2( 5, 5 )
-
-[node name="Possessable34" parent="." instance=ExtResource( 12 )]
-position = Vector2( 7028, 3058 )
-scale = Vector2( 8, 8 )
-
-[node name="Possessable35" parent="." instance=ExtResource( 11 )]
-position = Vector2( 7002, 3394 )
-scale = Vector2( 2, 2 )
-
-[node name="Possessable36" parent="." instance=ExtResource( 13 )]
-position = Vector2( 7378, 3481 )
-rotation = 1.309
-scale = Vector2( 5, 5 )
-
-[node name="Possessable37" parent="." instance=ExtResource( 12 )]
-position = Vector2( 6374, 3486 )
-scale = Vector2( 8, 8 )
-
-[node name="Possessable38" parent="." instance=ExtResource( 11 )]
-position = Vector2( 7002, 3394 )
-scale = Vector2( 2, 2 )
-
-[node name="Possessable39" parent="." instance=ExtResource( 13 )]
-position = Vector2( 7378, 3481 )
-rotation = 1.309
-scale = Vector2( 5, 5 )
-
-[node name="Possessable40" parent="." instance=ExtResource( 12 )]
-position = Vector2( 6374, 3486 )
-scale = Vector2( 8, 8 )
-
-[node name="Possessable41" parent="." instance=ExtResource( 11 )]
-position = Vector2( 5839, 4149 )
-scale = Vector2( 2, 2 )
-
-[node name="Possessable42" parent="." instance=ExtResource( 13 )]
-position = Vector2( 6196, 4223 )
-rotation = 1.309
-scale = Vector2( 5, 5 )
-
-[node name="Possessable43" parent="." instance=ExtResource( 12 )]
-position = Vector2( 6135, 3952 )
-scale = Vector2( 8, 8 )
-
-[node name="Possessable44" parent="." instance=ExtResource( 11 )]
-position = Vector2( 6732, 3864 )
-scale = Vector2( 2, 2 )
-
-[node name="Possessable45" parent="." instance=ExtResource( 13 )]
-position = Vector2( 6584, 4081 )
-rotation = 1.309
-scale = Vector2( 5, 5 )
-
-[node name="Possessable46" parent="." instance=ExtResource( 12 )]
-position = Vector2( 6412, 3883 )
-scale = Vector2( 8, 8 )
-
-[node name="Possessable47" parent="." instance=ExtResource( 11 )]
-position = Vector2( 6386, 4219 )
-scale = Vector2( 2, 2 )
-
-[node name="Possessable48" parent="." instance=ExtResource( 13 )]
-position = Vector2( 6762, 4306 )
-rotation = 1.309
-scale = Vector2( 5, 5 )
-
-[node name="Possessable49" parent="." instance=ExtResource( 12 )]
-position = Vector2( 5758, 4311 )
-scale = Vector2( 8, 8 )
-
-[node name="Possessable50" parent="." instance=ExtResource( 11 )]
-position = Vector2( 6386, 4219 )
-scale = Vector2( 2, 2 )
-
-[node name="Possessable51" parent="." instance=ExtResource( 13 )]
-position = Vector2( 6762, 4306 )
-rotation = 1.309
-scale = Vector2( 5, 5 )
-
-[node name="Possessable52" parent="." instance=ExtResource( 12 )]
-position = Vector2( 5758, 4311 )
-scale = Vector2( 8, 8 )
-
-[node name="Possessable53" parent="." instance=ExtResource( 11 )]
-position = Vector2( 5839, 4149 )
-scale = Vector2( 2, 2 )
 
 [node name="Possessable54" parent="." instance=ExtResource( 13 )]
-position = Vector2( 6196, 4223 )
+position = Vector2( 6253, 4310 )
 rotation = 1.309
 scale = Vector2( 5, 5 )
 
 [node name="Possessable55" parent="." instance=ExtResource( 12 )]
-position = Vector2( 6135, 3952 )
-scale = Vector2( 8, 8 )
-
-[node name="Possessable56" parent="." instance=ExtResource( 11 )]
-position = Vector2( 6732, 3864 )
-scale = Vector2( 2, 2 )
-
-[node name="Possessable57" parent="." instance=ExtResource( 13 )]
-position = Vector2( 6584, 4081 )
-rotation = 1.309
-scale = Vector2( 5, 5 )
-
-[node name="Possessable58" parent="." instance=ExtResource( 12 )]
-position = Vector2( 6412, 3883 )
-scale = Vector2( 8, 8 )
-
-[node name="Possessable59" parent="." instance=ExtResource( 11 )]
-position = Vector2( 6386, 4219 )
-scale = Vector2( 2, 2 )
-
-[node name="Possessable60" parent="." instance=ExtResource( 13 )]
-position = Vector2( 6762, 4306 )
-rotation = 1.309
-scale = Vector2( 5, 5 )
-
-[node name="Possessable61" parent="." instance=ExtResource( 12 )]
-position = Vector2( 5758, 4311 )
+position = Vector2( 7982, 4114 )
 scale = Vector2( 8, 8 )
 
 [node name="Possessable62" parent="." instance=ExtResource( 11 )]
-position = Vector2( 6386, 4219 )
+position = Vector2( 8389, 4280 )
 scale = Vector2( 2, 2 )
 
 [node name="Possessable63" parent="." instance=ExtResource( 13 )]
-position = Vector2( 6762, 4306 )
+position = Vector2( 7071, 4241 )
 rotation = 1.309
 scale = Vector2( 5, 5 )
 
 [node name="Possessable64" parent="." instance=ExtResource( 12 )]
-position = Vector2( 5758, 4311 )
+position = Vector2( 5608, 4304 )
 scale = Vector2( 8, 8 )
 
 [node name="Door" parent="." instance=ExtResource( 8 )]
