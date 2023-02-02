@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Cat_Goof/Cat_Goof.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Dog_Oof/Dog_Oof.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/God_Forsaken_TileSet/The PIPE (3).png" type="Texture" id=5]
 [ext_resource path="res://assets/Lights/Lights.png" type="Texture" id=6]
 [ext_resource path="res://MultiTargetCam.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World_Objects/Door.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World_Objects/LightBeam.tscn" type="PackedScene" id=9]
 [ext_resource path="res://World_Objects/TrashBagsBIG.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/PossessableObjects/PossessableBlock.tscn" type="PackedScene" id=11]
@@ -285,6 +286,9 @@ texture = ExtResource( 4 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 441600, 235520 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="MultiTargetCam" parent="." instance=ExtResource( 7 )]
 current = true
@@ -401,3 +405,7 @@ scale = Vector2( 2, 2 )
 [node name="Possessable3" parent="." instance=ExtResource( 12 )]
 position = Vector2( 1294, 452 )
 scale = Vector2( 8, 8 )
+
+[node name="Door" parent="." instance=ExtResource( 8 )]
+position = Vector2( 41091, 772 )
+scale = Vector2( 0.5, 0.5 )
