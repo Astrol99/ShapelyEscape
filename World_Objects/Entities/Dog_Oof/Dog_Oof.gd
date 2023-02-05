@@ -42,9 +42,6 @@ func get_new_animation(direction):
 	
 	return animation_new
 
-#func _ready():
-	#get_parent().get_node("MultiTargetCam").add_target(self)
-
 func on_Player_posess():
 	possessing = true
 	self.collision_layer = 0
