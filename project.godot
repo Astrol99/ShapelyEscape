@@ -12,33 +12,27 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Actor",
 "language": "GDScript",
-"path": "res://Actor.gd"
+"path": "res://World_Objects/Entities/Actor.gd"
 }, {
 "base": "Actor",
 "class": "Cat_Goof",
 "language": "GDScript",
-"path": "res://Cat_Goof/Cat_Goof.gd"
+"path": "res://World_Objects/Entities/Cat_Goof/Cat_Goof.gd"
 }, {
 "base": "Actor",
 "class": "Dog_Oof",
 "language": "GDScript",
-"path": "res://Dog_Oof/Dog_Oof.gd"
-}, {
-"base": "EditorVCSInterface",
-"class": "GitAPI",
-"language": "NativeScript",
-"path": "res://addons/godot-git-plugin/git_api.gdns"
+"path": "res://World_Objects/Entities/Dog_Oof/Dog_Oof.gd"
 }, {
 "base": "Actor",
 "class": "Possessable",
 "language": "GDScript",
-"path": "res://Possessable.gd"
+"path": "res://World_Objects/Entities/Possessable.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
 "Cat_Goof": "",
 "Dog_Oof": "",
-"GitAPI": "",
 "Possessable": ""
 }
 
