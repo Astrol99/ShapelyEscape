@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/doors/doors.png" type="Texture" id=1]
+[ext_resource path="res://World_Objects/Door/Door.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -83,8 +84,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 132, 149 )
 
-[node name="Door" type="StaticBody2D"]
-collision_layer = 2
+[node name="Door" type="Area2D"]
+collision_layer = 0
+script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 16 )
@@ -93,3 +95,5 @@ playing = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2( 1.9, 1.924 )
 shape = SubResource( 17 )
+
+[connection signal="body_entered" from="." to="." method="_on_Door_body_entered"]
