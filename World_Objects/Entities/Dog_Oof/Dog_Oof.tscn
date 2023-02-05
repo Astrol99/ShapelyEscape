@@ -90,6 +90,7 @@ tracks/0/keys = {
 }
 
 [node name="Dog_Oof" type="KinematicBody2D"]
+collision_mask = 13
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -110,3 +111,4 @@ anims/landing = SubResource( 4 )
 anims/run = SubResource( 5 )
 
 [node name="DogArea" parent="." instance=ExtResource( 3 )]
+collision_mask = 4

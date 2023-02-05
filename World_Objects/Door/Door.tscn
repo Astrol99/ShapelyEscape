@@ -83,12 +83,12 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 132, 149 )
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="Door" type="StaticBody2D"]
+collision_layer = 2
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 16 )
-animation = "open"
-frame = 5
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2( 1.9, 1.924 )

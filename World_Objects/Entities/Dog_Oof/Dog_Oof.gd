@@ -3,6 +3,7 @@ extends Actor
 
 onready var sprite = $Sprite
 onready var animation_player = $AnimationPlayer
+
 var possessing = false
 
 func get_direction():
@@ -41,8 +42,8 @@ func get_new_animation(direction):
 	
 	return animation_new
 
-func _ready():
-	get_parent().get_node("MultiTargetCam").add_target(self)
+#func _ready():
+	#get_parent().get_node("MultiTargetCam").add_target(self)
 
 func on_Player_posess():
 	possessing = true
