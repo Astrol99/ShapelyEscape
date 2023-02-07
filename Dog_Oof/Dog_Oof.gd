@@ -1,6 +1,7 @@
 class_name Dog_Oof
 extends Actor
 
+var burnable = false
 onready var sprite = $Sprite
 onready var animation_player = $AnimationPlayer
 var possessing = false
