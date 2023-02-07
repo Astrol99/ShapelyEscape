@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/God_Forsaken_TileSet/The PIPE (3).png" type="Texture" id=4]
 [ext_resource path="res://World_Objects/Doors/SilverDoor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World_Objects/TrashBag/TrashBag.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/God_Forsaken_TileSet/Background (1).png" type="Texture" id=7]
+[ext_resource path="res://assets/God_Forsaken_TileSet/Background.png" type="Texture" id=7]
 [ext_resource path="res://World_Objects/Screen/Screen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World_Objects/SpawnPipe/SpawnPipe.tscn" type="PackedScene" id=9]
 [ext_resource path="res://World_Objects/Incinerator/Incinerator.tscn" type="PackedScene" id=12]

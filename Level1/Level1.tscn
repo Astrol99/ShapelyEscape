@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/God_Forsaken_TileSet/The PIPE (3).png" type="Texture" id=4]
 [ext_resource path="res://World_Objects/Doors/BronzeDoor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World_Objects/TrashBag/TrashBag.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/God_Forsaken_TileSet/Background (1).png" type="Texture" id=7]
+[ext_resource path="res://assets/God_Forsaken_TileSet/Background.png" type="Texture" id=7]
 [ext_resource path="res://World_Objects/Screen/Screen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World_Objects/SpawnPipe/SpawnPipe.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/keybinds/keybindstsa.png" type="Texture" id=10]
@@ -219,7 +219,8 @@ position = Vector2( 1007, 685 )
 current = true
 process_mode = 0
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Background" type="Sprite" parent="Camera2D"]
