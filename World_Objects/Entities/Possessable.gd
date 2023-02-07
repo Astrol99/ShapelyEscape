@@ -3,13 +3,12 @@ extends Actor
 
 export (bool) var dog_possessable = true
 export (bool) var cat_possessable = true
-
+var burnable = true
 var possesseddog = false
 var possessedcat = false
 
 var landing = false
 onready var sprite = $Sprite
-
 
 func calculate_move_velocity(linear_velocity, direction, speed, is_jump_interrupted):
 	var _velocity = linear_velocity
@@ -55,6 +54,7 @@ func _process(delta):
 	if direction.x != 0:
 		if direction.x > 0:
 			sprite.scale.x = abs(sprite.scale.x)
+			
 		else:
 			sprite.scale.x = -abs(sprite.scale.x)
 			
@@ -72,3 +72,6 @@ func _on_Area2D_PotentialSelectCat():
 func _on_Area2D_stop():
 	possesseddog = false
 	possessedcat = false
+	
+func on_Incinerator_kill():
+	self.queue_free

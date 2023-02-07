@@ -3,7 +3,7 @@ extends Actor
 
 onready var sprite = $Sprite
 onready var animation_player = $AnimationPlayer
-
+var burnable = false
 var possessing = false
 
 func _physics_process(delta):
