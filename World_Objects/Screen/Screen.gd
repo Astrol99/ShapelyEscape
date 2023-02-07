@@ -1,10 +1,14 @@
 extends Node2D
 
+signal GAME_COMPLETE
+signal GAME_OVER
+
 export (NodePath) onready var timer = get_node(timer)
+export (NodePath) onready var door = get_node(door)
+export (NodePath) onready var spawn_pipe = get_node(spawn_pipe)
 
 export (int) var max_score = 10
 export (int) var score = 0
-export (float) var time = 60
 
 onready var time_label = $Time
 onready var score_label = $Score
@@ -20,6 +24,11 @@ onready var shapes = [
 
 func _on_Timer_timeout():
 	if score < max_score:
+		emit_signal("GAME_OVER")
+		spawn_pipe.get_child(0).stop()
+		time_label.add_color_override("font_color", Color(255,0,0))
+		time_label.set_text("0.00")
+		msg_label.add_color_override("font_color", Color(255,0,0))
 		msg_label.set_text("GAME OVER")
 
 func _on_shape_incinerated(shape):
@@ -27,13 +36,18 @@ func _on_shape_incinerated(shape):
 		score += 1
 		shape_sprite.texture = shapes[randi() % shapes.size()]
 
-func _ready():
-	timer.start(time)
-
 func _physics_process(_delta):
-	if score < max_score:
-		time_label.set_text(format_second(timer.get_time_left()))
-		score_label.set_text("%d/%d" % [score, max_score])
+	if not timer.is_stopped():
+		if score < max_score:
+			time_label.set_text(format_second(timer.get_time_left()))
+			score_label.set_text("%d/%d" % [score, max_score])
+		elif score >= max_score:
+			emit_signal("GAME_COMPLETE")
+			timer.stop()
+			spawn_pipe.get_child(0).stop()
+			score_label.add_color_override("font_color", Color(0,255,0))
+			msg_label.add_color_override("font_color", Color(0,255,0))
+			msg_label.set_text("DOOR IS UNLOCKED")
 
 func format_second(total_seconds: float) -> String:
 	var seconds:float = fmod(total_seconds , 60.0)

@@ -8,9 +8,6 @@ var shapes = [
 	preload("res://World_Objects/Entities/PossessableObjects/PossessableSemiCircle.tscn")
 ]
 
-
-
-
 func _on_Timer_timeout():
 	var shape = shapes[randi() % shapes.size()].instance()
 	shape.set_position(Vector2(0, 288))

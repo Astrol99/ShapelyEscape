@@ -289,7 +289,7 @@ font_data = ExtResource( 11 )
 
 [node name="Timer" type="Timer" parent="."]
 process_mode = 0
-wait_time = 90.0
+wait_time = 10.0
 one_shot = true
 autostart = true
 
@@ -320,6 +320,10 @@ __meta__ = {
 [node name="Screen" parent="." instance=ExtResource( 8 )]
 position = Vector2( 577, 492 )
 timer = NodePath("../Timer")
+door = NodePath("../Door")
+spawn_pipe = NodePath("../SpawnPipe")
+max_score = 1
+score = 1
 
 [node name="Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1759, 921 )
@@ -420,3 +424,4 @@ scale = Vector2( 0.2, 0.2 )
 collision_mask = 15
 
 [connection signal="timeout" from="Timer" to="Screen" method="_on_Timer_timeout"]
+[connection signal="GAME_COMPLETE" from="Screen" to="Door" method="_on_Screen_GAME_COMPLETE"]

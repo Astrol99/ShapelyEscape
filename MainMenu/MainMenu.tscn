@@ -108,7 +108,7 @@ script = ExtResource( 1 )
 volume_db = -20.0
 
 [node name="Space_Background" type="Sprite" parent="."]
-scale = Vector2( 2.00488, 2.00488 )
+scale = Vector2( 1.87317, 1.87317 )
 texture = ExtResource( 7 )
 centered = false
 
@@ -133,6 +133,7 @@ position = Vector2( 820, 953 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "brown"
+frame = 1
 playing = true
 
 [node name="Silver_Key" type="AnimatedSprite" parent="."]
@@ -140,7 +141,6 @@ position = Vector2( 1146, 956 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "diamond"
-frame = 3
 playing = true
 
 [node name="Gold_Key" type="AnimatedSprite" parent="."]
@@ -148,7 +148,7 @@ position = Vector2( 1038, 956 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "gold"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Diamond_Key" type="AnimatedSprite" parent="."]
@@ -156,6 +156,7 @@ position = Vector2( 930, 956 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "silver"
+frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="."]
