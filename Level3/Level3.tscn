@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://assets/God_Forsaken_TileSet/The Colorful Baby Tileset BBy.png" type="Texture" id=1]
 [ext_resource path="res://World_Objects/Entities/Dog_Oof/Dog_Oof.tscn" type="PackedScene" id=2]
@@ -9,8 +9,6 @@
 [ext_resource path="res://assets/God_Forsaken_TileSet/Background (1).png" type="Texture" id=7]
 [ext_resource path="res://World_Objects/Screen/Screen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World_Objects/SpawnPipe/SpawnPipe.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/keybinds/keybindstsa.png" type="Texture" id=10]
-[ext_resource path="res://assets/COMIC.TTF" type="DynamicFontData" id=11]
 [ext_resource path="res://World_Objects/Incinerator/Incinerator.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -201,14 +199,11 @@ points = PoolVector2Array( 0, 0, 736, 0, 736, 736, 0, 736 )
 2/shapes = [  ]
 2/z_index = 0
 
-[sub_resource type="DynamicFont" id=24]
-font_data = ExtResource( 11 )
-
-[node name="Level1" type="Node2D"]
+[node name="Level3" type="Node2D"]
 
 [node name="Timer" type="Timer" parent="."]
 process_mode = 0
-wait_time = 120.0
+wait_time = 300.0
 one_shot = true
 autostart = true
 
@@ -238,88 +233,12 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Player1Controls" type="Label" parent="."]
-margin_left = 718.0
-margin_top = 769.0
-margin_right = 982.0
-margin_bottom = 821.0
-custom_fonts/font = SubResource( 24 )
-text = "PLAYER 1
-MOVE             POSSESS"
-align = 1
-
-[node name="W" type="Sprite" parent="Player1Controls"]
-position = Vector2( 62, 71 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 90, 72, 396, 396 )
-
-[node name="A" type="Sprite" parent="Player1Controls"]
-position = Vector2( 25, 109 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 666, 72, 396, 396 )
-
-[node name="D" type="Sprite" parent="Player1Controls"]
-position = Vector2( 99, 109 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 90, 648, 396, 396 )
-
-[node name="E" type="Sprite" parent="Player1Controls"]
-position = Vector2( 187, 79 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 666, 648, 396, 396 )
-
-[node name="Player2Controls" type="Label" parent="."]
-margin_left = 994.0
-margin_top = 770.0
-margin_right = 1258.0
-margin_bottom = 822.0
-custom_fonts/font = SubResource( 24 )
-text = "PLAYER 1
-MOVE             POSSESS"
-align = 1
-
-[node name="UP" type="Sprite" parent="Player2Controls"]
-position = Vector2( 62, 71 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 90, 1224, 396, 396 )
-
-[node name="LEFT" type="Sprite" parent="Player2Controls"]
-position = Vector2( 25, 109 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 666, 1224, 396, 396 )
-
-[node name="RIGHT" type="Sprite" parent="Player2Controls"]
-position = Vector2( 99, 109 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 90, 1800, 396, 396 )
-
-[node name="SLASH" type="Sprite" parent="Player2Controls"]
-position = Vector2( 187, 79 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 1242, 648, 396, 396 )
-
 [node name="Screen" parent="." instance=ExtResource( 8 )]
 position = Vector2( 577, 492 )
 timer = NodePath("../Timer")
 door = NodePath("../Door")
 spawn_pipe = NodePath("../SpawnPipe")
-max_score = 3
+max_score = 5
 
 [node name="Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1759, 921 )
@@ -328,7 +247,7 @@ NextLevel = "res://MainMenu/MainMenu.tscn"
 
 [node name="SpawnPipe" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1545, 141 )
-delaySpawn = 1
+delaySpawn = 3.0
 
 [node name="Incinerator" parent="." instance=ExtResource( 12 )]
 position = Vector2( 443, 1208 )
@@ -352,5 +271,5 @@ collision_mask = 15
 [connection signal="timeout" from="Timer" to="Screen" method="_on_Timer_timeout"]
 [connection signal="GAME_COMPLETE" from="Screen" to="Door" method="_on_Screen_GAME_COMPLETE"]
 [connection signal="incinerated" from="Incinerator" to="Screen" method="_on_Incinerator_incinerated"]
-[connection signal="incinerated" from="Incinerator" to="Cat_Goof" method="on_Player2_unpossess"]
-[connection signal="incinerated" from="Incinerator" to="Dog_Oof" method="on_Player_unpossess"]
+[connection signal="incinerated" from="Incinerator" to="Cat_Goof" method="on_Player2_unpossess_two"]
+[connection signal="incinerated" from="Incinerator" to="Dog_Oof" method="on_Player_unpossess_two"]

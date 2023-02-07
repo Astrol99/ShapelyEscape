@@ -1,6 +1,6 @@
 extends Node2D
 
-export (int) onready var delaySpawn = 5
+export (float) var delaySpawn = 1
 
 var shapes = [
 	preload("res://World_Objects/Entities/PossessableObjects/PossessableRectangle.tscn"),

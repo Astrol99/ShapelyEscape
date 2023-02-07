@@ -49,13 +49,13 @@ func on_Player_posess():
 	self.collision_mask = 0
 	hide()
 
-func on_Player_unpossess_two():
+func on_Player_unpossess_two(body):
 	possessing = false
 	self.collision_layer = 1
 	self. collision_mask = 1
 	show()
 
-func on_Player_unpossess(body):
+func on_Player_unpossess():
 	possessing = false
 	self.collision_layer = 1
 	self. collision_mask = 1

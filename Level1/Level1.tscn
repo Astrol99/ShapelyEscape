@@ -208,7 +208,7 @@ font_data = ExtResource( 11 )
 
 [node name="Timer" type="Timer" parent="."]
 process_mode = 0
-wait_time = 120.0
+wait_time = 300.0
 one_shot = true
 autostart = true
 
@@ -319,7 +319,7 @@ position = Vector2( 577, 492 )
 timer = NodePath("../Timer")
 door = NodePath("../Door")
 spawn_pipe = NodePath("../SpawnPipe")
-max_score = 3
+max_score = 5
 
 [node name="Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1759, 921 )
@@ -328,7 +328,7 @@ NextLevel = "res://Level2/Level2.tscn"
 
 [node name="SpawnPipe" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1545, 141 )
-delaySpawn = 1
+delaySpawn = 3.0
 
 [node name="Incinerator" parent="." instance=ExtResource( 12 )]
 position = Vector2( 443, 1208 )
