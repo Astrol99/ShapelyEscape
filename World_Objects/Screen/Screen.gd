@@ -30,6 +30,9 @@ func _on_Timer_timeout():
 		time_label.set_text("0.00")
 		msg_label.add_color_override("font_color", Color(255,0,0))
 		msg_label.set_text("GAME OVER")
+		
+		yield(get_tree().create_timer(3.0), "timeout")
+		get_tree().reload_current_scene()
 
 func _ready():
 	shape_sprite.texture = shapes[randi() % shapes.size()]
@@ -43,6 +46,7 @@ func _physics_process(_delta):
 			emit_signal("GAME_COMPLETE")
 			timer.stop()
 			spawn_pipe.get_child(0).stop()
+			score_label.set_text("%d/%d" % [score, max_score])
 			score_label.add_color_override("font_color", Color(0,255,0))
 			msg_label.add_color_override("font_color", Color(0,255,0))
 			msg_label.set_text("DOOR IS UNLOCKED")

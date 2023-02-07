@@ -8,6 +8,10 @@ var possessing = false
 
 func _physics_process(delta):
 	var direction = get_direction()
+	
+	if Input.is_action_just_pressed("reset"):
+		get_tree().reload_current_scene()
+	
 	if(not possessing):
 		
 		if direction.x != 0:

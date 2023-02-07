@@ -2,6 +2,8 @@ extends Area2D
 
 export (NodePath) onready var screen = get_node(screen)
 
+var posessed = true
+
 signal incinerated(body)
 
 func _on_Incinerator_body_entered(body):
