@@ -35,7 +35,14 @@ func on_Player2_posess():
 	self.collision_layer = 0
 	self.collision_mask = 0
 
+func on_Player2_unpossess_two(body):
+	possessing = false
+	show()
+	self.collision_mask = 1
+	self.collision_layer = 1
+
 func on_Player2_unpossess():
+	print("========================================================================================================================")
 	possessing = false
 	show()
 	self.collision_mask = 1

@@ -324,7 +324,7 @@ max_score = 3
 [node name="Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1759, 921 )
 scale = Vector2( 0.25, 0.25 )
-NextLevel = "res://Level2/Level2.tscn"
+NextLevel = "res://MainMenu/MainMenu.tscn"
 
 [node name="SpawnPipe" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1545, 141 )
@@ -352,5 +352,5 @@ collision_mask = 15
 [connection signal="timeout" from="Timer" to="Screen" method="_on_Timer_timeout"]
 [connection signal="GAME_COMPLETE" from="Screen" to="Door" method="_on_Screen_GAME_COMPLETE"]
 [connection signal="incinerated" from="Incinerator" to="Screen" method="_on_Incinerator_incinerated"]
-[connection signal="incinerated" from="Incinerator" to="Cat_Goof" method="on_Player2_unpossess_two"]
-[connection signal="incinerated" from="Incinerator" to="Dog_Oof" method="on_Player_unpossess_two"]
+[connection signal="incinerated" from="Incinerator" to="Cat_Goof" method="on_Player2_unpossess"]
+[connection signal="incinerated" from="Incinerator" to="Dog_Oof" method="on_Player_unpossess"]

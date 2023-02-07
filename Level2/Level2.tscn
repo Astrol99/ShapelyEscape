@@ -1,17 +1,17 @@
 [gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://assets/God_Forsaken_TileSet/The Colorful Baby Tileset BBy.png" type="Texture" id=1]
-[ext_resource path="res://World_Objects/Entities/Dog_Oof/Dog_Oof.tscn" type="PackedScene" id=2]
-[ext_resource path="res://World_Objects/Entities/Cat_Goof/Cat_Goof.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/God_Forsaken_TileSet/The PIPE (3).png" type="Texture" id=4]
-[ext_resource path="res://World_Objects/Door/Door.tscn" type="PackedScene" id=5]
-[ext_resource path="res://World_Objects/TrashBag/TrashBag.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/God_Forsaken_TileSet/Background (1).png" type="Texture" id=7]
+[ext_resource path="res://assets/God_Forsaken_TileSet/The PIPE (3).png" type="Texture" id=2]
+[ext_resource path="res://assets/God_Forsaken_TileSet/Background (1).png" type="Texture" id=3]
+[ext_resource path="res://assets/keybinds/keybindstsa.png" type="Texture" id=4]
+[ext_resource path="res://World_Objects/Incinerator/Incinerator.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World_Objects/Entities/Cat_Goof/Cat_Goof.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World_Objects/Entities/Dog_Oof/Dog_Oof.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World_Objects/Screen/Screen.tscn" type="PackedScene" id=8]
-[ext_resource path="res://World_Objects/SpawnPipe/SpawnPipe.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/keybinds/keybindstsa.png" type="Texture" id=10]
-[ext_resource path="res://assets/COMIC.TTF" type="DynamicFontData" id=11]
-[ext_resource path="res://World_Objects/Incinerator/Incinerator.tscn" type="PackedScene" id=12]
+[ext_resource path="res://World_Objects/Door/Door.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World_Objects/SpawnPipe/SpawnPipe.tscn" type="PackedScene" id=10]
+[ext_resource path="res://World_Objects/TrashBag/TrashBag.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/COMIC.TTF" type="DynamicFontData" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 736, 0, 736, 736, 0, 736 )
@@ -178,7 +178,7 @@ points = PoolVector2Array( 0, 0, 736, 0, 736, 736, 0, 736 )
 } ]
 1/z_index = 0
 2/name = "The PIPE (3).png 2"
-2/texture = ExtResource( 4 )
+2/texture = ExtResource( 2 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 2208, 2208 )
@@ -202,7 +202,7 @@ points = PoolVector2Array( 0, 0, 736, 0, 736, 736, 0, 736 )
 2/z_index = 0
 
 [sub_resource type="DynamicFont" id=24]
-font_data = ExtResource( 11 )
+font_data = ExtResource( 12 )
 
 [node name="Level1" type="Node2D"]
 
@@ -222,7 +222,7 @@ __meta__ = {
 
 [node name="Background" type="Sprite" parent="Camera2D"]
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 7 )
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 47104, 23552 )
 
@@ -251,28 +251,28 @@ align = 1
 [node name="W" type="Sprite" parent="Player1Controls"]
 position = Vector2( 62, 71 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 90, 72, 396, 396 )
 
 [node name="A" type="Sprite" parent="Player1Controls"]
 position = Vector2( 25, 109 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 666, 72, 396, 396 )
 
 [node name="D" type="Sprite" parent="Player1Controls"]
 position = Vector2( 99, 109 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 90, 648, 396, 396 )
 
 [node name="E" type="Sprite" parent="Player1Controls"]
 position = Vector2( 187, 79 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 666, 648, 396, 396 )
 
@@ -289,28 +289,28 @@ align = 1
 [node name="UP" type="Sprite" parent="Player2Controls"]
 position = Vector2( 62, 71 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 90, 1224, 396, 396 )
 
 [node name="LEFT" type="Sprite" parent="Player2Controls"]
 position = Vector2( 25, 109 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 666, 1224, 396, 396 )
 
 [node name="RIGHT" type="Sprite" parent="Player2Controls"]
 position = Vector2( 99, 109 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 90, 1800, 396, 396 )
 
 [node name="SLASH" type="Sprite" parent="Player2Controls"]
 position = Vector2( 187, 79 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 1242, 648, 396, 396 )
 
@@ -321,30 +321,30 @@ door = NodePath("../Door")
 spawn_pipe = NodePath("../SpawnPipe")
 max_score = 3
 
-[node name="Door" parent="." instance=ExtResource( 5 )]
+[node name="Door" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1759, 921 )
 scale = Vector2( 0.25, 0.25 )
-NextLevel = "res://Level2/Level2.tscn"
+NextLevel = "res://Level3/Level3.tscn"
 
-[node name="SpawnPipe" parent="." instance=ExtResource( 9 )]
+[node name="SpawnPipe" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1545, 141 )
 delaySpawn = 1
 
-[node name="Incinerator" parent="." instance=ExtResource( 12 )]
+[node name="Incinerator" parent="." instance=ExtResource( 5 )]
 position = Vector2( 443, 1208 )
 scale = Vector2( 0.734845, 0.734845 )
 screen = NodePath("../Screen")
 
-[node name="Trashbags" parent="." instance=ExtResource( 6 )]
+[node name="Trashbags" parent="." instance=ExtResource( 11 )]
 position = Vector2( 99, 703 )
 scale = Vector2( 0.25, 0.25 )
 
-[node name="Cat_Goof" parent="." instance=ExtResource( 3 )]
+[node name="Cat_Goof" parent="." instance=ExtResource( 6 )]
 position = Vector2( 774, 943 )
 scale = Vector2( 0.2, 0.2 )
 collision_mask = 15
 
-[node name="Dog_Oof" parent="." instance=ExtResource( 2 )]
+[node name="Dog_Oof" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1135, 955 )
 scale = Vector2( 0.2, 0.2 )
 collision_mask = 15
@@ -352,5 +352,5 @@ collision_mask = 15
 [connection signal="timeout" from="Timer" to="Screen" method="_on_Timer_timeout"]
 [connection signal="GAME_COMPLETE" from="Screen" to="Door" method="_on_Screen_GAME_COMPLETE"]
 [connection signal="incinerated" from="Incinerator" to="Screen" method="_on_Incinerator_incinerated"]
-[connection signal="incinerated" from="Incinerator" to="Cat_Goof" method="on_Player2_unpossess_two"]
-[connection signal="incinerated" from="Incinerator" to="Dog_Oof" method="on_Player_unpossess_two"]
+[connection signal="incinerated" from="Incinerator" to="Cat_Goof" method="on_Player2_unpossess"]
+[connection signal="incinerated" from="Incinerator" to="Dog_Oof" method="on_Player_unpossess"]
