@@ -31,10 +31,8 @@ func _on_Timer_timeout():
 		msg_label.add_color_override("font_color", Color(255,0,0))
 		msg_label.set_text("GAME OVER")
 
-func _on_shape_incinerated(shape):
-	if (shape in shape_sprite.texture.resource_path):
-		score += 1
-		shape_sprite.texture = shapes[randi() % shapes.size()]
+func _ready():
+	shape_sprite.texture = shapes[randi() % shapes.size()]
 
 func _physics_process(_delta):
 	if not timer.is_stopped():
@@ -56,3 +54,13 @@ func format_second(total_seconds: float) -> String:
 		return "%05.2f" % [seconds]
 	else:
 		return "%02d:%02d" % [minutes, seconds]
+
+
+func _on_Incinerator_incinerated(body):
+	var current_shape_name = shape_sprite.texture.resource_path.replace("res://assets/shapes/", "").replace(".png", "")
+	print(current_shape_name)
+	print(body.name.to_lower())
+	if (current_shape_name in body.name.to_lower()):
+		print("IT WORKED")
+		score += 1
+		shape_sprite.texture = shapes[randi() % shapes.size()]

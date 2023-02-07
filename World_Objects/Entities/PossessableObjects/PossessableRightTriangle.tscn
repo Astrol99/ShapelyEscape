@@ -4,7 +4,7 @@
 [ext_resource path="res://World_Objects/Entities/CheckImCalled.gd" type="Script" id=2]
 [ext_resource path="res://World_Objects/Entities/Possessable.gd" type="Script" id=3]
 
-[node name="Possessable" type="KinematicBody2D"]
+[node name="PossessableRightTriangle" type="KinematicBody2D"]
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]

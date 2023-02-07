@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://World_Objects/Incinerator/Incinerator.gd" type="Script" id=1]
+[ext_resource path="res://assets/God_Forsaken_TileSet/Red Pipe.png" type="Texture" id=2]
+
+[node name="Incinerator" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 230, 0, 299, 575 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 230, 1 )
+polygon = PoolVector2Array( -99.5, -146.5, -80.5, -146.5, -80.5, -288.5, -379.5, -288.5, -379.5, -146.5, -360.5, -146.5, -360.5, 286.5, -99.5, 286.5 )
+
+[connection signal="body_entered" from="." to="." method="_on_Incinerator_body_entered"]

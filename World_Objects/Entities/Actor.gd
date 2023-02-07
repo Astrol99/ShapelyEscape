@@ -9,6 +9,10 @@ const FLOOR_NORMAL = Vector2.UP
 var velocity = Vector2.ZERO
 
 func _physics_process(delta):
+	if (position.y > 1100):
+		position.y = 466
+		position.x = 1536
+	
 	if is_on_ceiling():
 		velocity.y = 0
 	

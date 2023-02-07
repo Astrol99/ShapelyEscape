@@ -72,6 +72,3 @@ func _on_Area2D_PotentialSelectCat():
 func _on_Area2D_stop():
 	possesseddog = false
 	possessedcat = false
-	
-func on_Incinerator_kill():
-	self.queue_free
