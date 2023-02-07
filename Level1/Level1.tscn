@@ -322,8 +322,6 @@ position = Vector2( 577, 492 )
 timer = NodePath("../Timer")
 door = NodePath("../Door")
 spawn_pipe = NodePath("../SpawnPipe")
-max_score = 1
-score = 1
 
 [node name="Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1759, 921 )

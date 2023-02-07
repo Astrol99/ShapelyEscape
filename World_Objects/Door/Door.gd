@@ -2,6 +2,7 @@ extends Area2D
 
 export (String) var NextLevel
 
+var posessed = true
 var locked = true
 
 func _ready():
