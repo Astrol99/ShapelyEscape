@@ -2,7 +2,7 @@
 
 [ext_resource path="res://MainMenu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://assets/Dog_Oof/dogballsanimated.png" type="Texture" id=2]
-[ext_resource path="res://goofy.tres" type="Theme" id=3]
+[ext_resource path="res://assets/goofy.tres" type="Theme" id=3]
 [ext_resource path="res://assets/cat_goof/Cat goof looks (6).png" type="Texture" id=4]
 [ext_resource path="res://assets/Key/Paw Key.png" type="Texture" id=5]
 [ext_resource path="res://assets/COMIC.TTF" type="DynamicFontData" id=6]
@@ -108,22 +108,22 @@ script = ExtResource( 1 )
 volume_db = -20.0
 
 [node name="Space_Background" type="Sprite" parent="."]
-position = Vector2( 988, 541 )
-scale = Vector2( 1.37561, 1.37561 )
+scale = Vector2( 1.87317, 1.87317 )
 texture = ExtResource( 7 )
+centered = false
 
 [node name="Dog_Oof" type="Sprite" parent="."]
-position = Vector2( 350, 602 )
+position = Vector2( 362, 625 )
 rotation = -0.479966
-scale = Vector2( 2.55861, 2.55861 )
+scale = Vector2( 2.2909, 2.2909 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 78, 39, 273, 273 )
 
 [node name="Cat_Goof" type="Sprite" parent="."]
-position = Vector2( 1588, 617 )
+position = Vector2( 1590, 651 )
 rotation = 0.335103
-scale = Vector2( -2.02692, 2.07476 )
+scale = Vector2( -1.8442, 1.88773 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 90, 60, 330, 300 )
@@ -133,7 +133,7 @@ position = Vector2( 820, 953 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "brown"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Silver_Key" type="AnimatedSprite" parent="."]
@@ -141,7 +141,6 @@ position = Vector2( 1146, 956 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "diamond"
-frame = 1
 playing = true
 
 [node name="Gold_Key" type="AnimatedSprite" parent="."]
@@ -149,7 +148,7 @@ position = Vector2( 1038, 956 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "gold"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Diamond_Key" type="AnimatedSprite" parent="."]
@@ -157,7 +156,7 @@ position = Vector2( 930, 956 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "silver"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="."]
@@ -180,14 +179,14 @@ alignment = 1
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 margin_right = 1920.0
-margin_bottom = 113.0
+margin_bottom = 57.0
 focus_neighbour_top = NodePath("../Quit")
 text = "Start"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
-margin_top = 117.0
+margin_top = 61.0
 margin_right = 1920.0
-margin_bottom = 230.0
+margin_bottom = 118.0
 focus_neighbour_bottom = NodePath("../Start")
 text = "Quit"
 

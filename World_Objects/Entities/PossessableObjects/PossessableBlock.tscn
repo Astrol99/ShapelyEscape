@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/shapes/rectangle.png" type="Texture" id=1]
+[ext_resource path="res://World_Objects/Entities/Possessable.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24, 26.5 )
+
+[node name="PossessableBlock" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 13
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -0.5 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1.90735e-06, 1.125 )
+scale = Vector2( 3, 2.57031 )
+texture = ExtResource( 1 )
