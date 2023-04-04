@@ -1,7 +1,7 @@
 class_name Possessable
 extends RigidBody2D
 
-export var speed = Vector2(10.0, 10.0)
+export var speed = Vector2(30.0, 30.0)
 
 var velocity = Vector2.ZERO
 
