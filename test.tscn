@@ -36,17 +36,18 @@ position = Vector2( 1000, 20 )
 scale = Vector2( 50, 1 )
 shape = SubResource( 1 )
 
-[node name="PossessableCircle" parent="." instance=ExtResource( 2 )]
-position = Vector2( 770, 804 )
+[node name="PossessableCircle" parent="." groups=["bodies"] instance=ExtResource( 2 )]
+position = Vector2( 794, 343 )
+rotation = -1.57079
 
-[node name="PossessableOval" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1260, 708 )
+[node name="PossessableOval" parent="." groups=["bodies"] instance=ExtResource( 4 )]
+position = Vector2( 1284, 247 )
 
-[node name="PossessableRectangle" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1110, 851 )
+[node name="PossessableRectangle" parent="." groups=["bodies"] instance=ExtResource( 6 )]
+position = Vector2( 1134, 390 )
 
-[node name="PossessableRightTriangle" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1520, 770 )
+[node name="PossessableRightTriangle" parent="." groups=["bodies"] instance=ExtResource( 5 )]
+position = Vector2( 1544, 309 )
 
-[node name="PossessableSemiCircle" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1293, 893 )
+[node name="PossessableSemiCircle" parent="." groups=["bodies"] instance=ExtResource( 3 )]
+position = Vector2( 1012, 240 )

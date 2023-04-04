@@ -358,7 +358,7 @@ NextLevel = "res://Level2/Level2.tscn"
 
 [node name="SpawnPipe" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1545, 141 )
-delaySpawn = 3.0
+delaySpawn = 10.0
 
 [node name="Incinerator" parent="." instance=ExtResource( 12 )]
 position = Vector2( 443, 1208 )

@@ -1,7 +1,7 @@
 class_name Possessable
 extends RigidBody2D
 
-export var speed = Vector2(30.0, 30.0)
+export var speed = Vector2(20.0, 50.0)
 
 var velocity = Vector2.ZERO
 
@@ -13,6 +13,9 @@ var possessedcat = false
 
 var landing = false
 onready var sprite = $Sprite
+
+func _ready():
+	add_to_group("bodies")
 
 func calculate_move_velocity(linear_velocity, direction, speed, is_jump_interrupted):
 	var _velocity = linear_velocity
@@ -45,6 +48,8 @@ func _process(delta):
 		
 		if Input.is_action_pressed("jump1"):
 			velocity.y = -speed.y
+		elif Input.is_action_just_released("jump1"):
+			velocity.y = 0
 		
 	elif possesseddog and dog_possessable:
 		direction = get_direction2()
@@ -52,6 +57,8 @@ func _process(delta):
 		
 		if Input.is_action_pressed("jump2"):
 			velocity.y = -speed.y
+		elif Input.is_action_just_released("jump2"):
+			velocity.y = 0
 	
 	velocity = calculate_move_velocity(velocity, direction, speed, is_jump_interrupted)
 	

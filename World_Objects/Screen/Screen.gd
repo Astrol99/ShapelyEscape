@@ -68,3 +68,5 @@ func _on_Incinerator_incinerated(body):
 		print("IT WORKED")
 		score += 1
 		shape_sprite.texture = shapes[randi() % shapes.size()]
+	else:
+		score -= 1

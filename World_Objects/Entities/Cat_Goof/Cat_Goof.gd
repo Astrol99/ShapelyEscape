@@ -30,8 +30,6 @@ func _physics_process(delta):
 		if animation != animation_player.current_animation:
 			animation_player.play(animation)
 			print(self.name + ": " + animation)
-		
-		move_and_slide(velocity, Vector2.UP)
 
 func on_Player2_posess():
 	possessing = true

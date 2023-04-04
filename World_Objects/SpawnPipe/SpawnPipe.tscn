@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/God_Forsaken_TileSet/PIPEFORNEW.png" type="Texture" id=1]
 [ext_resource path="res://World_Objects/SpawnPipe/SpawnPipe.gd" type="Script" id=2]
+[ext_resource path="res://assets/goofy.tres" type="Theme" id=3]
 
 [node name="SpawnPipe" type="Node2D"]
 script = ExtResource( 2 )
@@ -15,5 +16,13 @@ autostart = true
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 230, 0, 299, 575 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -25.0
+margin_top = 64.0
+margin_right = 23.0
+margin_bottom = 121.0
+theme = ExtResource( 3 )
+text = "99"
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
