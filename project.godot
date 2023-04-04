@@ -24,7 +24,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://World_Objects/Entities/Dog_Oof/Dog_Oof.gd"
 }, {
-"base": "Actor",
+"base": "RigidBody2D",
 "class": "Possessable",
 "language": "GDScript",
 "path": "res://World_Objects/Entities/Possessable.gd"

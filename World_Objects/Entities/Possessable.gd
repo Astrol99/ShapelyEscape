@@ -1,5 +1,9 @@
 class_name Possessable
-extends Actor
+extends RigidBody2D
+
+export var speed = Vector2(10.0, 10.0)
+
+var velocity = Vector2.ZERO
 
 export (bool) var dog_possessable = true
 export (bool) var cat_possessable = true
@@ -24,12 +28,12 @@ func calculate_move_velocity(linear_velocity, direction, speed, is_jump_interrup
 func get_direction1():
 	return Vector2(
 		Input.get_action_strength("move_right1") - Input.get_action_strength("move_left1"),
-		-1 if is_on_floor() and Input.is_action_just_pressed("jump1") else 0)
+		Input.is_action_just_pressed("jump1"))
 
 func get_direction2():
 	return Vector2(
 		Input.get_action_strength("move_right2") - Input.get_action_strength("move_left2"),
-		-1 if is_on_floor() and Input.is_action_just_pressed("jump2") else 0)
+		Input.is_action_just_pressed("jump2"))
 
 func _process(delta):
 	var direction = Vector2.ZERO
@@ -39,22 +43,19 @@ func _process(delta):
 		direction = get_direction1()
 		is_jump_interrupted = Input.is_action_just_released("jump1") and velocity.y < 0.0
 		
-		if Input.is_action_pressed("jump1") and is_on_floor():
+		if Input.is_action_pressed("jump1"):
 			velocity.y = -speed.y
 		
 	elif possesseddog and dog_possessable:
 		direction = get_direction2()
 		is_jump_interrupted = Input.is_action_just_released("jump2") and velocity.y < 0.0
 		
-		if Input.is_action_pressed("jump2") and is_on_floor():
+		if Input.is_action_pressed("jump2"):
 			velocity.y = -speed.y
 	
 	velocity = calculate_move_velocity(velocity, direction, speed, is_jump_interrupted)
 	
-	if is_on_ceiling():
-		velocity.y = 0
-	
-	move_and_slide(velocity, Vector2.UP)
+	apply_central_impulse(velocity)
 
 func _on_Area2D_PotentialSelect():
 	possesseddog = true

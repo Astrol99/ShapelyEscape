@@ -227,7 +227,7 @@ __meta__ = {
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 7 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 47104, 23552 )
+region_rect = Rect2( 0, 0, 73600, 73600 )
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2( 0.15, 0.15 )

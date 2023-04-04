@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://World_Objects/Entities/Cat_Goof/Cat_Goof.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World_Objects/Entities/PossessableObjects/PossessableCircle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World_Objects/Entities/PossessableObjects/PossessableSemiCircle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World_Objects/Entities/PossessableObjects/PossessableOval.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World_Objects/Entities/PossessableObjects/PossessableRightTriangle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World_Objects/Entities/PossessableObjects/PossessableRectangle.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20, 20 )
+
+[node name="test" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="Cat_Goof" parent="." instance=ExtResource( 1 )]
+position = Vector2( 718, 657 )
+scale = Vector2( 0.25, 0.25 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( -67, 994 )
+collision_layer = 8
+collision_mask = 5
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+margin_right = 2000.0
+margin_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1000, 20 )
+scale = Vector2( 50, 1 )
+shape = SubResource( 1 )
+
+[node name="PossessableCircle" parent="." instance=ExtResource( 2 )]
+position = Vector2( 770, 804 )
+
+[node name="PossessableOval" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1260, 708 )
+
+[node name="PossessableRectangle" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1110, 851 )
+
+[node name="PossessableRightTriangle" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1520, 770 )
+
+[node name="PossessableSemiCircle" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1293, 893 )
