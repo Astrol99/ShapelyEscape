@@ -18,11 +18,13 @@ region_enabled = true
 region_rect = Rect2( 230, 0, 299, 575 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = -25.0
-margin_top = 64.0
-margin_right = 23.0
-margin_bottom = 121.0
+margin_left = -41.0
+margin_top = 62.0
+margin_right = 41.0
+margin_bottom = 119.0
 theme = ExtResource( 3 )
-text = "99"
+text = "9.00"
+align = 1
+valign = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

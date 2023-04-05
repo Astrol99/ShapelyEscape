@@ -13,7 +13,11 @@ var shapes = [
 func _ready():
 	$Timer.start(delaySpawn)
 
+func _process(delta):
+	$Label.text = "%.02f" % $Timer.get_time_left()
+
 func _on_Timer_timeout():
+	$Label.text = "%.02f" % $Timer.get_time_left()
 	var shape = shapes[randi() % shapes.size()].instance()
 	shape.set_position(Vector2((randi() % 200) - 100, 288))
 	add_child(shape)

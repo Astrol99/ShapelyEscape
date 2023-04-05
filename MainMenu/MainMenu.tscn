@@ -133,7 +133,7 @@ position = Vector2( 820, 953 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "brown"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Silver_Key" type="AnimatedSprite" parent="."]
@@ -141,7 +141,6 @@ position = Vector2( 1146, 956 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "diamond"
-frame = 1
 playing = true
 
 [node name="Gold_Key" type="AnimatedSprite" parent="."]
@@ -149,7 +148,7 @@ position = Vector2( 1038, 956 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "gold"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Diamond_Key" type="AnimatedSprite" parent="."]
@@ -157,7 +156,7 @@ position = Vector2( 930, 956 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "silver"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="."]

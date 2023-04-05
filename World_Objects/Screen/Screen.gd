@@ -64,9 +64,11 @@ func _on_Incinerator_incinerated(body):
 	var current_shape_name = shape_sprite.texture.resource_path.replace("res://assets/shapes/", "").replace(".png", "")
 	print(current_shape_name)
 	print(body.name.to_lower())
-	if (current_shape_name in body.name.to_lower()):
-		print("IT WORKED")
-		score += 1
-		shape_sprite.texture = shapes[randi() % shapes.size()]
-	else:
-		score -= 1
+	
+	if (body.is_in_group("bodies")):
+		if (current_shape_name in body.name.to_lower()):
+			print("IT WORKED")
+			score += 1
+			shape_sprite.texture = shapes[randi() % shapes.size()]
+		else:
+			score -= 1
