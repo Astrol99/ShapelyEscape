@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://MainMenu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://assets/Dog_Oof/dogballsanimated.png" type="Texture" id=2]
@@ -7,6 +7,46 @@
 [ext_resource path="res://assets/Key/Paw Key.png" type="Texture" id=5]
 [ext_resource path="res://assets/COMIC.TTF" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/space.png" type="Texture" id=7]
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 416, 0, 416, 416 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 2 )
+region = Rect2( 832, 416, 416, 416 )
+
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [ SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 480, 480 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 4 )
+region = Rect2( 480, 0, 480, 480 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 4 )
+region = Rect2( 480, 1440, 480, 480 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 1440, 480, 480 )
+
+[sub_resource type="SpriteFrames" id=26]
+animations = [ {
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 5 )
@@ -77,22 +117,22 @@ animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "brown",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
 "name": "diamond",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
 "loop": true,
 "name": "gold",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
 "loop": true,
 "name": "silver",
-"speed": 5.0
+"speed": 3.0
 } ]
 
 [sub_resource type="DynamicFont" id=18]
@@ -104,29 +144,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-volume_db = -20.0
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="Space_Background" type="Sprite" parent="."]
-scale = Vector2( 1.87317, 1.87317 )
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 2000, 1200 )
+
+[node name="Space_Background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 texture = ExtResource( 7 )
 centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 2000, 1200 )
 
-[node name="Dog_Oof" type="Sprite" parent="."]
-position = Vector2( 362, 625 )
+[node name="Dog_Oof" type="AnimatedSprite" parent="."]
+position = Vector2( 361, 674 )
 rotation = -0.479966
 scale = Vector2( 2.2909, 2.2909 )
-texture = ExtResource( 2 )
-region_enabled = true
-region_rect = Rect2( 78, 39, 273, 273 )
+frames = SubResource( 21 )
+playing = true
 
-[node name="Cat_Goof" type="Sprite" parent="."]
-position = Vector2( 1590, 651 )
+[node name="Cat_Goof" type="AnimatedSprite" parent="."]
+position = Vector2( 1616, 682 )
 rotation = 0.335103
 scale = Vector2( -1.8442, 1.88773 )
-texture = ExtResource( 4 )
-region_enabled = true
-region_rect = Rect2( 90, 60, 330, 300 )
+frames = SubResource( 26 )
+frame = 3
+playing = true
 
 [node name="Brown_Key" type="AnimatedSprite" parent="."]
 position = Vector2( 820, 953 )
@@ -141,6 +183,7 @@ position = Vector2( 1146, 956 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "diamond"
+frame = 1
 playing = true
 
 [node name="Gold_Key" type="AnimatedSprite" parent="."]
@@ -148,7 +191,7 @@ position = Vector2( 1038, 956 )
 scale = Vector2( 0.12963, 0.12963 )
 frames = SubResource( 17 )
 animation = "gold"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Diamond_Key" type="AnimatedSprite" parent="."]
