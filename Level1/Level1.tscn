@@ -288,7 +288,7 @@ margin_top = 770.0
 margin_right = 1258.0
 margin_bottom = 822.0
 custom_fonts/font = SubResource( 24 )
-text = "PLAYER 1
+text = "PLAYER 2
 MOVE             POSSESS"
 align = 1
 
@@ -361,7 +361,8 @@ NextLevel = "res://Level2/Level2.tscn"
 
 [node name="SpawnPipe" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1545, 141 )
-delaySpawn = 5.0
+z_as_relative = false
+delaySpawn = 3.0
 
 [node name="Incinerator" parent="." instance=ExtResource( 12 )]
 position = Vector2( 443, 1208 )
@@ -373,13 +374,11 @@ position = Vector2( 99, 703 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="Cat_Goof" parent="." instance=ExtResource( 3 )]
-position = Vector2( 774, 943 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( 829, 729 )
 collision_mask = 15
 
 [node name="Dog_Oof" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1135, 955 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( 1117, 730 )
 collision_mask = 15
 
 [connection signal="timeout" from="Timer" to="Screen" method="_on_Timer_timeout"]

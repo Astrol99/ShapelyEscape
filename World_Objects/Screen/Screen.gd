@@ -47,8 +47,8 @@ func _physics_process(_delta):
 			timer.stop()
 			spawn_pipe.get_child(0).stop()
 			score_label.set_text("%d/%d" % [score, max_score])
-			score_label.add_color_override("font_color", Color(0,255,0))
-			msg_label.add_color_override("font_color", Color(0,255,0))
+			score_label.add_color_override("font_color", Color.green)
+			msg_label.add_color_override("font_color", Color.green)
 			msg_label.set_text("DOOR IS UNLOCKED")
 
 func format_second(total_seconds: float) -> String:
@@ -72,3 +72,8 @@ func _on_Incinerator_incinerated(body):
 			shape_sprite.texture = shapes[randi() % shapes.size()]
 		else:
 			score -= 1
+		
+		if (score < 0):
+			score_label.add_color_override("font_color", Color.red)
+		else:
+			score_label.add_color_override("font_color", Color.white)

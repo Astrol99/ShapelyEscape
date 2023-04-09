@@ -19,5 +19,6 @@ func _process(delta):
 func _on_Timer_timeout():
 	$Label.text = "%.02f" % $Timer.get_time_left()
 	var shape = shapes[randi() % shapes.size()].instance()
-	shape.set_position(Vector2((randi() % 200) - 100, 288))
+	shape.set_position(Vector2((randi() % 200) - 100, 200))
+	shape.set_z_index(-1)
 	add_child(shape)

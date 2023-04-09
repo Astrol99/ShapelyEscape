@@ -262,12 +262,11 @@ position = Vector2( 99, 703 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="Cat_Goof" parent="." instance=ExtResource( 3 )]
-position = Vector2( 774, 943 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( 615, 708 )
 collision_mask = 15
 
 [node name="Dog_Oof" parent="." instance=ExtResource( 2 )]
-position = Vector2( 660, 944 )
+position = Vector2( 791, 706 )
 scale = Vector2( 0.2, 0.2 )
 collision_mask = 15
 
