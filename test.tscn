@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://World_Objects/Entities/Cat_Goof/Cat_Goof.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World_Objects/Entities/PossessableObjects/PossessableCircle.tscn" type="PackedScene" id=2]
@@ -7,6 +7,10 @@
 [ext_resource path="res://World_Objects/Entities/PossessableObjects/PossessableRightTriangle.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World_Objects/Entities/PossessableObjects/PossessableRectangle.tscn" type="PackedScene" id=6]
 
+[sub_resource type="Environment" id=2]
+background_mode = 4
+glow_enabled = true
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20, 20 )
 
@@ -14,6 +18,9 @@ extents = Vector2( 20, 20 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
 
 [node name="Cat_Goof" parent="." instance=ExtResource( 1 )]
 position = Vector2( 718, 657 )

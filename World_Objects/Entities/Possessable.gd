@@ -39,6 +39,7 @@ func get_direction2():
 		Input.is_action_just_pressed("jump2"))
 
 func _process(delta):
+	# Movement
 	var direction = Vector2.ZERO
 	var is_jump_interrupted = false
 	
@@ -66,10 +67,13 @@ func _process(delta):
 
 func _on_Area2D_PotentialSelect():
 	possesseddog = true
+	sprite.modulate = Color(1.75,1.75,1.75,1)
 
 func _on_Area2D_PotentialSelectCat():
 	possessedcat = true
+	sprite.modulate = Color(1.75,1.75,1.75,1)
 
 func _on_Area2D_stop():
 	possesseddog = false
 	possessedcat = false
+	sprite.modulate = Color(1,1,1,1)

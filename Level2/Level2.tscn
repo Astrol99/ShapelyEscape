@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/God_Forsaken_TileSet/The Colorful Baby Tileset BBy.png" type="Texture" id=1]
 [ext_resource path="res://assets/God_Forsaken_TileSet/The PIPE (3).png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://World_Objects/Entities/Cat_Goof/Cat_Goof.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World_Objects/Entities/Dog_Oof/Dog_Oof.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World_Objects/Screen/Screen.tscn" type="PackedScene" id=8]
+[ext_resource path="res://WorldEnvironment.tscn" type="PackedScene" id=9]
 [ext_resource path="res://World_Objects/SpawnPipe/SpawnPipe.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World_Objects/TrashBag/TrashBag.tscn" type="PackedScene" id=11]
 
@@ -200,6 +201,8 @@ points = PoolVector2Array( 0, 0, 736, 0, 736, 736, 0, 736 )
 2/z_index = 0
 
 [node name="Level3" type="Node2D"]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource( 9 )]
 
 [node name="Timer" type="Timer" parent="."]
 process_mode = 0
